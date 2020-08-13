@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -339,4 +340,193 @@ template {
   */
 [hidden] {
   display: none;
+}
+
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*--------------------*/
+body {
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+.header {
+  background-color: #2B4074;
+}
+
+.header__inner {
+  min-height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  padding: 0px 20px;
+}
+
+.logo__link {
+  margin-left: 8px;
+}
+
+.menu__btn {
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 3px;
+  border: none;
+  position: relative;
+}
+
+.menu__btn span {
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #2B4074;
+  position: absolute;
+  left: 14px;
+  top: 19px;
+}
+
+.menu__btn::after {
+  content: '';
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #2B4074;
+  position: absolute;
+  top: 15px;
+  left: 14px;
+}
+
+.menu__btn::before {
+  content: '';
+  width: 12px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #2B4074;
+  position: absolute;
+  top: 23px;
+  left: 14px;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0px 30px;
+  }
+  .logo__link {
+    margin-left: 20px;
+  }
+  .header__inner {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0px 40px;
+  }
+  .logo__link {
+    margin-left: 0px;
+  }
+  .header__inner {
+    min-height: 100px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 0px 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .menu__btn {
+    margin-right: 90px;
+  }
 }
