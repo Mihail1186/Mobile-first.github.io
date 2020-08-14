@@ -828,6 +828,10 @@ body {
   font-size: 18px;
 }
 
+.coll__btn:active {
+  background-color: #868686c2;
+}
+
 @media (min-width: 768px) {
   .coll {
     padding: 0;
