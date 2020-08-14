@@ -11,7 +11,7 @@ body {
    transition: all 0.5s;
 }
 
-@media (min-width:0px){
+@media (min-width: 0px) {
    .top-slider__text {
       display: none;
    }
@@ -127,6 +127,9 @@ body {
    min-height: 193px;
    &__btn {
       display: none;
+      &:active {
+         background-color: #97a2bec2;
+      }
    }
 }
 .top-slider__item {
@@ -215,10 +218,10 @@ body {
          z-index: 5;
       }
       .slick-prev {
-         background-color:$accent;
+         background-color: $accent;
          top: calc(50% - 56px);
          border: 1px solid rgba(0, 0, 0, 0.425);
-         &:active{
+         &:active {
             background-color: #97a2bec2;
          }
       }
@@ -227,8 +230,8 @@ body {
          background-color: $accent;
          bottom: calc(50% - 56px);
          border: 1px solid rgba(0, 0, 0, 0.336);
-         &:active{
-            background-color:#97a2bec2;
+         &:active {
+            background-color: #97a2bec2;
          }
       }
       &__text {
@@ -280,7 +283,7 @@ body {
    }
 }
 
-@media (min-width: 1044px) {
+@media (min-width: 1440px) {
    .top-slider {
       &__item {
          min-height: 668px;
@@ -296,6 +299,98 @@ body {
          font-size: 24px;
          line-height: 26px;
          max-width: 886px;
+      }
+      .slick-arrow {
+         width: 70px;
+         height: 70px;
+      }
+      .slick-prev {
+         top: calc(50% - 70px);
+      }
+      .slick-next {
+         transform: rotate(180deg);
+         bottom: calc(50% - 70px);
+      }
+   }
+}
+
+.coll {
+   background: $accent;
+   text-align: center;
+   padding: 40px 0;
+}
+
+.coll__title {
+   @extend %roboto-500;
+   color: #ffffff;
+   font-size: 24px;
+   line-height: 24px;
+   margin-bottom: 18px;
+}
+.coll__text {
+   color: #ffffff;
+   margin-bottom: 40px;
+   font-size: 16px;
+   line-height: 18px;
+}
+.coll__btn {
+   padding: 16px;
+   background: #f9f6e5;
+   border-radius: 3px;
+   color: $accent;
+   font-family: "Roboto-Medium";
+   font-size: 18px;
+}
+
+@media (min-width: 768px) {
+   .coll {
+      padding: 0;
+      &__box {
+         text-align: left;
+         max-width: 427px;
+         margin-top: 60px;
+      }
+      &__text {
+         max-width: 328px;
+      }
+      &__inner {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+      }
+      &__btn {
+         flex: start;
+         flex-direction: column;
+      }
+   }
+}
+
+@media (min-width: 1024px) {
+   .coll {
+      &__box {
+         max-width: 500px;
+      }
+      &__text {
+         max-width: 600px;
+      }
+   }
+}
+
+@media (min-width: 1440px) {
+   .coll {
+      &__inner {
+         padding: 0 80px;
+      }
+      &__box {
+         max-width: 600px;
+      }
+      &__title {
+         font-size: 24px;
+         line-height: 32px;
+      }
+      &__text {
+         max-width: 600px;
+         font-size: 16px;
       }
    }
 }
