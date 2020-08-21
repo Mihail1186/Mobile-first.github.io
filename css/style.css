@@ -1583,91 +1583,45 @@ body {
 }
 
 @media (min-width: 640px) {
-  .news {
-    background: #F9F6E5;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .news__inner {
-    padding: 40px 0;
-    text-align: center;
-    font-family: "RobotoCondensed-Bold";
-  }
   .news__title {
-    font-size: 24px;
+    font-size: 48px;
     line-height: 38px;
-    color: #4A4A4A;
-    margin-bottom: 70px;
+    margin-bottom: 90px;
   }
   .news__title::after {
-    width: 50px;
-    top: 58px;
+    width: 100px;
+    top: 65px;
   }
   .news__items {
-    margin: -10px 0;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 2px;
-  }
-  .news__item {
-    width: 270px;
-    padding: 10px 0;
-  }
-  .news__item:hover .news__item-hover {
-    opacity: 1;
-  }
-  .news__item:hover .news__item-title {
-    display: none;
-  }
-  .news__item:hover .news__item-bg {
-    border-radius: 4px;
-  }
-  .news__item-bg {
-    border-radius: 4px 4px 0 0;
-    height: 400px;
-  }
-  .news__item-hover {
-    width: 100%;
-    height: 100%;
+    margin: -15px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: rgba(43, 64, 116, 0.3);
-    border: 10px solid #2B4074;
-    border-radius: 4px;
-    opacity: 0;
-    -webkit-transition: all 0.4s;
-    transition: all 0.4s;
-    position: relative;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
-  .news__item-hover .news__item-search,
-  .news__item-hover .news__item-info {
-    margin: 0 5px;
+  .news__item {
+    width: 50%;
+    padding: 15px;
   }
-  .news__item-text {
-    position: absolute;
-    left: 0px;
-    bottom: 30px;
-    color: #F9F6E5;
-    background-color: #2B4074;
-    width: 100%;
-    padding: 10px 0 10px 10px;
-    text-align: left;
+}
+
+@media (min-width: 1024px) {
+  .news__title {
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom: 133px;
   }
-  .news__item-title {
-    color: #4A4A4A;
-    background-color: #fff;
-    padding: 10px 0px;
-    border-radius: 0 0 4px 4px;
+  .news__title::after {
+    top: 90px;
+  }
+  .news__item {
+    width: 33.333%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .news__item {
+    width: 25%;
   }
 }
